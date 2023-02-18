@@ -21,6 +21,7 @@ export default function Header({
       <div className="flex h-full w-full px-4">
         <div className="flex items-center w-full lg:w-60 lg:border-r-2 lg:border-c-border">
           <Link
+            className="hover:text-white"
             href="/"
             onClick={() => {
               setLoading(true);
@@ -47,7 +48,7 @@ export default function Header({
           <Link
             href="/"
             className={
-              'border-r-2 border-c-border px-8 h-full flex items-center' +
+              'border-r-2 border-c-border px-8 h-full flex items-center hover:text-white' +
               (activeSegment == null ? ' text-white' : '')
             }
             onClick={() => {
@@ -60,7 +61,7 @@ export default function Header({
           <Link
             href="/about"
             className={
-              'border-r-2 border-c-border px-8 h-full flex items-center' +
+              'border-r-2 border-c-border px-8 h-full flex items-center hover:text-white' +
               (activeSegment == 'about' ? ' text-white' : '')
             }
             onClick={() => {
@@ -73,7 +74,7 @@ export default function Header({
           <Link
             href="/projects"
             className={
-              'border-r-2 border-c-border px-8 h-full flex items-center' +
+              'border-r-2 border-c-border px-8 h-full flex items-center hover:text-white' +
               (activeSegment == 'projects' ? ' text-white' : '')
             }
             onClick={() => {
@@ -85,11 +86,11 @@ export default function Header({
           </Link>
         </div>
       </div>
-      <div className="hidden lg:flex whitespace-nowrap items-center justify-center px-8 h-full border-l-2 border-c-border">
+      <div className="hidden lg:flex whitespace-nowrap items-center justify-center h-full border-l-2 border-c-border">
         <Link
           href="/contact"
           className={
-            'flex items-center h-full' +
+            'flex items-center h-full hover:text-white px-8' +
             (activeSegment == 'contact' ? ' text-white' : '')
           }
           onClick={() => {

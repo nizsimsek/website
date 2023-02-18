@@ -19,6 +19,8 @@ module.exports = {
         'c-purple': '#4D5BCE',
         'c-turquoise': '#43D9AD',
         'c-pink': '#E99287',
+        'c-ghost': '#1E2D3D',
+        'c-darker': '#011221',
       },
     },
   },

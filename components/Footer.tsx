@@ -15,17 +15,17 @@ export default function Footer() {
               find me in:
             </span>
             <div className="flex h-full">
-              <span className="flex items-center h-full border-l-2 border-c-border px-4">
+              <span className="flex items-center h-full border-l-2 border-c-border px-4 hover:text-white">
                 <Link href="https://twitter.com/ilahinizo">
                   <ImTwitter />
                 </Link>
               </span>
-              <span className="flex items-center h-full border-l-2 lg:border-r-2 border-c-border px-4">
+              <span className="flex items-center h-full border-l-2 lg:border-r-2 border-c-border px-4 hover:text-white">
                 <Link href="https://linkedin.com/in/nizsimsek">
                   <ImLinkedin2 />
                 </Link>
               </span>
-              <span className="flex items-center h-full border-l-2 border-c-border px-4 lg:hidden">
+              <span className="flex items-center h-full border-l-2 border-c-border px-4 hover:text-white lg:hidden">
                 <Link href="https://github.com/nizsimsek">
                   <ImGithub />
                 </Link>
@@ -33,7 +33,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="hidden lg:flex h-full">
-            <span className="flex items-center h-full border-l-2 border-c-border px-4 ">
+            <span className="flex items-center h-full border-l-2 border-c-border px-4 hover:text-white">
               <Link
                 href="https://github.com/nizsimsek"
                 className="flex items-center"
