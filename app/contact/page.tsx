@@ -210,7 +210,6 @@ const ContactForm = ({
         <textarea
           className="flex items-center p-2 w-full bg-c-darker border-2 border-c-border rounded-lg text-c-muted hover:border-c-muted focus:border-c-muted focus:outline-none"
           name="message"
-          pattern="[a-zA-Z0-9 ]{2,500}"
           title="Please enter your message"
           maxLength={500}
           required
