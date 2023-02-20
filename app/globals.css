@@ -1,4 +1,27 @@
 @tailwind base;
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 7px;
+  margin: 4px 0;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 7px;
+}
+
 @tailwind components;
 @tailwind utilities;
 
@@ -8,16 +31,18 @@
   font-family: 'Fira Code', monospace;
   background-color: #010c15;
   padding: 30px;
-  color: white;
+  color: #ffffff;
   height: -webkit-fill-available;
   height: 100%;
+  --primary: #010c15;
+  --secondary: #1e2d3d;
 }
 
 body {
   border: 2px solid #1e2d3d;
   background-color: #011627;
   border-radius: 20px;
-  height: calc(100vh - 60px);
-  position: relative;
+  height: -webkit-fill-available;
+  height: 100%;
   overflow: hidden;
 }

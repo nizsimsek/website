@@ -9,13 +9,13 @@ export default function Footer() {
   return (
     <>
       {activeSegment != null && (
-        <header className="flex justify-between text-c-muted border-t-2 border-c-border w-full h-12 absolute bottom-0">
-          <div className="flex h-full w-full justify-between lg:justify-start">
-            <span className="flex items-center h-full px-4 whitespace-nowrap">
+        <footer className="flex justify-between text-c-muted border-t-2 border-c-border w-full h-12 flex-[0_0_3rem]">
+          <div className="flex h-full w-full justify-between pl-4 lg:justify-start">
+            <span className="flex items-center h-full whitespace-nowrap lg:w-60 border-r-2 border-c-border pr-4 lg:pr-0">
               find me in:
             </span>
             <div className="flex h-full">
-              <span className="flex items-center h-full border-l-2 border-c-border px-4 hover:text-white">
+              <span className="flex items-center h-full px-4 hover:text-white border-l-2 border-c-border lg:border-l-0">
                 <Link href="https://twitter.com/ilahinizo">
                   <ImTwitter />
                 </Link>
@@ -32,8 +32,8 @@ export default function Footer() {
               </span>
             </div>
           </div>
-          <div className="hidden lg:flex h-full">
-            <span className="flex items-center h-full border-l-2 border-c-border px-4 hover:text-white">
+          <div className="hidden lg:flex h-full lg:w-48">
+            <span className="flex items-center h-full border-l-2 border-c-border hover:text-white lg:w-full lg:justify-center">
               <Link
                 href="https://github.com/nizsimsek"
                 className="flex items-center"
@@ -42,7 +42,7 @@ export default function Footer() {
               </Link>
             </span>
           </div>
-        </header>
+        </footer>
       )}
     </>
   );

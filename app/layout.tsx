@@ -13,20 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [isDevelopmentMode, setIsDevelopmentMode] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
-  }, [loading]);
+  const [isDevelopmentMode, setIsDevelopmentMode] = useState(false);
 
   let props = {
     menuIsOpen,
     setMenuIsOpen,
-    loading,
-    setLoading,
   };
 
   return (
@@ -43,21 +34,15 @@ export default function RootLayout({
             className="fixed inset-0 w-full h-full z-50"
           />
         )}
-        {!isDevelopmentMode && <Header {...props} />}
-        {!isDevelopmentMode && loading ? (
-          <div className="flex justify-center items-center h-screen">
-            <div className="animate-spin rounded-full border-t-2 border-b-2 border-gray-900">
-              <ImSpinner className="text-5xl" />
-            </div>
-          </div>
-        ) : (
-          !isDevelopmentMode && (
-            <div className={menuIsOpen ? '' : 'overflow-y-auto h-[calc(100vh_-_10.5rem)]'}>
+        {!isDevelopmentMode && (
+          <div className="flex flex-col flex-nowrap h-full">
+            <Header {...props} />
+            <div className="overflow-y-auto scroll-smooth flex-auto mr-1 lg:mr-0">
               {menuIsOpen ? <MobileMenu {...props} /> : children}
             </div>
-          )
+            <Footer />
+          </div>
         )}
-        {!isDevelopmentMode && !loading && <Footer />}
       </body>
     </html>
   );

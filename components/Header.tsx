@@ -7,24 +7,19 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 export default function Header({
   menuIsOpen,
   setMenuIsOpen,
-  loading,
-  setLoading,
 }: {
   menuIsOpen: boolean;
   setMenuIsOpen: (value: boolean) => void;
-  loading: boolean;
-  setLoading: (value: boolean) => void;
 }) {
   const activeSegment = useSelectedLayoutSegment();
   return (
-    <header className="flex justify-between text-c-muted border-b-2 border-c-border w-full h-14">
+    <header className="flex justify-between text-c-muted border-b-2 border-c-border w-full h-14 flex-[0_0_3.5rem]">
       <div className="flex h-full w-full px-4">
         <div className="flex items-center w-full lg:w-60 lg:border-r-2 lg:border-c-border">
           <Link
             className="hover:text-white"
             href="/"
             onClick={() => {
-              setLoading(true);
               setMenuIsOpen(false);
             }}
           >
@@ -52,7 +47,6 @@ export default function Header({
               (activeSegment == null ? ' text-white' : '')
             }
             onClick={() => {
-              setLoading(true);
               setMenuIsOpen(false);
             }}
           >
@@ -65,7 +59,6 @@ export default function Header({
               (activeSegment == 'about' ? ' text-white' : '')
             }
             onClick={() => {
-              setLoading(true);
               setMenuIsOpen(false);
             }}
           >
@@ -78,7 +71,6 @@ export default function Header({
               (activeSegment == 'projects' ? ' text-white' : '')
             }
             onClick={() => {
-              setLoading(true);
               setMenuIsOpen(false);
             }}
           >
@@ -86,15 +78,14 @@ export default function Header({
           </Link>
         </div>
       </div>
-      <div className="hidden lg:flex whitespace-nowrap items-center justify-center h-full border-l-2 border-c-border">
+      <div className="hidden lg:flex whitespace-nowrap items-center justify-center h-full border-l-2 border-c-border w-48">
         <Link
           href="/contact"
           className={
-            'flex items-center h-full hover:text-white px-8' +
+            'flex items-center h-full hover:text-white ' +
             (activeSegment == 'contact' ? ' text-white' : '')
           }
           onClick={() => {
-            setLoading(true);
             setMenuIsOpen(false);
           }}
         >

@@ -7,13 +7,9 @@ import Footer from './Footer';
 export default function MobileMenu({
   menuIsOpen,
   setMenuIsOpen,
-  loading,
-  setLoading,
 }: {
   menuIsOpen: boolean;
   setMenuIsOpen: (value: boolean) => void;
-  loading: boolean;
-  setLoading: (value: boolean) => void;
 }) {
   const activeSegment = useSelectedLayoutSegment();
   return (
@@ -21,11 +17,10 @@ export default function MobileMenu({
       <Link
         href="/"
         className={
-          'border-b-2 border-c-border px-4 py-4 h-full flex items-center' +
+          'border-b-2 border-c-border px-4 py-3 h-full flex items-center' +
           (activeSegment == null ? ' text-white' : '')
         }
         onClick={() => {
-          setLoading(true);
           setMenuIsOpen(false);
         }}
       >
@@ -34,11 +29,10 @@ export default function MobileMenu({
       <Link
         href="/about"
         className={
-          'border-b-2 border-c-border px-4 py-4 h-full flex items-center' +
+          'border-b-2 border-c-border px-4 py-3 h-full flex items-center' +
           (activeSegment == 'about' ? ' text-white' : '')
         }
         onClick={() => {
-          setLoading(true);
           setMenuIsOpen(false);
         }}
       >
@@ -47,11 +41,10 @@ export default function MobileMenu({
       <Link
         href="/projects"
         className={
-          'border-b-2 border-c-border px-4 py-4 h-full flex items-center' +
+          'border-b-2 border-c-border px-4 py-3 h-full flex items-center' +
           (activeSegment == 'projects' ? ' text-white' : '')
         }
         onClick={() => {
-          setLoading(true);
           setMenuIsOpen(false);
         }}
       >
@@ -60,11 +53,10 @@ export default function MobileMenu({
       <Link
         href="/contact"
         className={
-          'border-b-2 border-c-border px-4 py-4 h-full flex items-center lg:hidden' +
+          'border-b-2 border-c-border px-4 py-3 h-full flex items-center lg:hidden' +
           (activeSegment == 'contact' ? ' text-white' : '')
         }
         onClick={() => {
-          setLoading(true);
           setMenuIsOpen(false);
         }}
       >
