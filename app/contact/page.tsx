@@ -3,10 +3,10 @@
 import Image from 'next/image';
 
 import { useState } from 'react';
-import { ContactInfos } from './components/ContactInfos.tsx';
-import { FindMeAlso } from './components/FindMeAlso.tsx';
-import { ContactForm } from './components/ContactForm.tsx';
-import { ContactFormPreview } from './components/ContactFormPreview.tsx';
+import { ContactInfos } from './components/ContactInfos';
+import { FindMeAlso } from './components/FindMeAlso';
+import { ContactForm } from './components/ContactForm';
+import { ContactFormPreview } from './components/ContactFormPreview';
 import { RxCross2 } from 'react-icons/rx';
 
 export default function ContactMe() {
