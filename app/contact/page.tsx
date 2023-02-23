@@ -43,6 +43,11 @@ export default function ContactMe() {
     setFormSubmitted,
   };
 
+  let removedProps = {
+    setIsRemoved,
+    setIsDontCare,
+  };
+
   return (
     <div className="flex flex-col lg:flex-row h-full">
       <div className="flex lg:hidden px-5 py-4 lg:h-full">
@@ -79,7 +84,11 @@ export default function ContactMe() {
             </span>
           </div>
           <div className="flex w-full h-full">
-            {formSubmitted ? <FormSubmit {...props} /> : <ContactForm {...props} />}
+            {formSubmitted ? (
+              <FormSubmit {...props} />
+            ) : (
+              <ContactForm {...props} />
+            )}
             <ContactFormPreview {...props} />
           </div>
         </div>
@@ -88,7 +97,13 @@ export default function ContactMe() {
   );
 }
 
-const RemovedComp = () => {
+const RemovedComp = ({
+  setIsRemoved,
+  setIsDontCare,
+}: {
+  setIsRemoved: (isRemoved: boolean) => void;
+  setIsDontCare: (isDontCare: boolean) => void;
+}) => {
   return (
     <div className="flex flex-col w-full h-full justify-center items-center">
       <h1 className="max-w-screen-sm text-center text-white text-4xl ">
