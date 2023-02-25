@@ -13,7 +13,7 @@ export default function MobileMenu({
 }) {
   const activeSegment = useSelectedLayoutSegment();
   return (
-    <header className="flex flex-col text-c-muted">
+    <header className="flex flex-col text-cl-muted">
       <Link
         href="/"
         className={

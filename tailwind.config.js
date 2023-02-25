@@ -16,6 +16,7 @@ module.exports = {
       colors: {
         'c-border': '#1E2D3D',
         'c-muted': '#607B96',
+        'cl-muted': 'rgba(255, 255, 255, 0.6)',
         'c-purple': '#4D5BCE',
         'c-turquoise': '#43D9AD',
         'c-pink': '#E99287',

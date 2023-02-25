@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <>
       {activeSegment != null && (
-        <footer className="flex justify-between text-c-muted border-t-2 border-c-border w-full h-12 flex-[0_0_3rem]">
+        <footer className="flex justify-between text-cl-muted border-t-2 border-c-border w-full h-12 flex-[0_0_3rem]">
           <div className="flex h-full w-full justify-between pl-4 lg:justify-start">
             <span className="flex items-center h-full whitespace-nowrap lg:w-60 border-r-2 border-c-border pr-4 lg:pr-0">
               find me in:

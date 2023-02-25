@@ -74,7 +74,7 @@ export default function ContactMe() {
       ) : (
         <div className="flex flex-col w-full h-full">
           <div className="hidden lg:flex flex-col w-full border-b-2 border-c-border">
-            <span className="flex items-center justify-between p-2 w-48 border-r-2 border-c-border text-c-muted">
+            <span className="flex items-center justify-between p-2 w-48 border-r-2 border-c-border text-cl-muted">
               contacts
               <RxCross2
                 onClick={() => {

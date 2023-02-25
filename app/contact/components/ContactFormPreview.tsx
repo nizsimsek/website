@@ -54,7 +54,7 @@ export const ContactFormPreview = ({
   }, [fullName, email, message, date]);
 
   return (
-    <div className="hidden lg:flex lg:flex-row lg:h-full lg:w-full lg:text-c-muted lg:p-10 lg:border-c-border lg:border-l-2">
+    <div className="hidden lg:flex lg:flex-row lg:h-full lg:w-full lg:text-cl-muted lg:p-10 lg:border-c-border lg:border-l-2">
       <div className="flex flex-col">
         <div>
           <span className="text-code-orange">const </span>

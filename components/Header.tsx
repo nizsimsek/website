@@ -13,7 +13,7 @@ export default function Header({
 }) {
   const activeSegment = useSelectedLayoutSegment();
   return (
-    <header className="flex justify-between text-c-muted border-b-2 border-c-border w-full h-14 flex-[0_0_3.5rem]">
+    <header className="flex justify-between text-cl-muted border-b-2 border-c-border w-full h-14 flex-[0_0_3.5rem]">
       <div className="flex h-full w-full px-4">
         <div className="flex items-center w-full lg:w-60 lg:border-r-2 lg:border-c-border">
           <Link

@@ -30,7 +30,7 @@ export const ContactForm = ({
 
   return (
     <form
-      className="flex flex-col h-full w-full p-4 text-c-muted lg:p-10"
+      className="flex flex-col h-full w-full p-4 text-cl-muted lg:p-10"
       onSubmit={handleSubmit}
     >
       <div className="flex flex-col h-auto mb-4">
@@ -38,7 +38,7 @@ export const ContactForm = ({
           _name:
         </label>
         <input
-          className="flex items-center p-2 h-10 w-full bg-c-darker border-2 border-c-border rounded-lg text-c-muted hover:border-c-muted focus:border-c-muted focus:outline-none"
+          className="flex items-center p-2 h-10 w-full bg-c-darker border-2 border-c-border rounded-lg text-cl-muted hover:border-c-muted focus:border-c-muted focus:outline-none"
           name="full-name"
           pattern="[a-zA-Z ]{2,30}"
           type="text"
@@ -55,7 +55,7 @@ export const ContactForm = ({
           _email:
         </label>
         <input
-          className="flex items-center p-2 h-10 w-full bg-c-darker border-2 border-c-border rounded-lg text-c-muted hover:border-c-muted focus:border-c-muted focus:outline-none"
+          className="flex items-center p-2 h-10 w-full bg-c-darker border-2 border-c-border rounded-lg text-cl-muted hover:border-c-muted focus:border-c-muted focus:outline-none"
           name="email"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
           type="email"
@@ -72,7 +72,7 @@ export const ContactForm = ({
           _message:
         </label>
         <textarea
-          className="flex items-center p-2 w-full bg-c-darker border-2 border-c-border rounded-lg text-c-muted hover:border-c-muted focus:border-c-muted focus:outline-none break-all"
+          className="flex items-center p-2 w-full bg-c-darker border-2 border-c-border rounded-lg text-cl-muted hover:border-c-muted focus:border-c-muted focus:outline-none break-all"
           name="message"
           title="Please enter your message"
           maxLength={5000}
