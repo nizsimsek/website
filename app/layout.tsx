@@ -37,7 +37,7 @@ export default function RootLayout({
         {!isDevelopmentMode && (
           <div className="flex flex-col flex-nowrap h-full">
             <Header {...props} />
-            <div className="overflow-y-auto scroll-smooth flex-auto mr-1 lg:mr-0">
+            <div className="overflow-y-auto lg:overflow-hidden scroll-smooth flex-auto mx-1 lg:mx-0">
               {menuIsOpen ? <MobileMenu {...props} /> : children}
             </div>
             <Footer />

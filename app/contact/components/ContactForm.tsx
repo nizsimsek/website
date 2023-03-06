@@ -30,7 +30,7 @@ export const ContactForm = ({
 
   return (
     <form
-      className="flex flex-col h-full w-full p-4 text-cl-muted lg:p-10"
+      className="flex flex-col h-full w-full p-4 text-cl-muted lg:p-10 lg:overflow-y-auto lg:mr-1"
       onSubmit={handleSubmit}
     >
       <div className="flex flex-col h-auto mb-4">

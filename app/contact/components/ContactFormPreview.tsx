@@ -54,8 +54,8 @@ export const ContactFormPreview = ({
   }, [fullName, email, message, date]);
 
   return (
-    <div className="hidden lg:flex lg:flex-row lg:h-full lg:w-full lg:text-cl-muted lg:p-10 lg:border-c-border lg:border-l-2">
-      <div className="flex flex-col">
+    <div className="hidden lg:flex lg:flex-row lg:h-full lg:w-full lg:text-cl-muted lg:p-10 lg:border-c-border lg:border-l-2 lg:overflow-y-auto lg:mr-1">
+      <div className="flex flex-col h-fit w-full break-words">
         <div>
           <span className="text-code-orange">const </span>
           <span className="text-code-pink">button = </span>

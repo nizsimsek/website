@@ -53,7 +53,7 @@ export default function ContactMe() {
       <div className="flex lg:hidden px-5 py-4 lg:h-full">
         <span className="text-sm">_contact-me</span>
       </div>
-      <div className="flex flex-col h-auto lg:w-64 lg:border-c-ghost lg:border-r-2 lg:h-full">
+      <div className="flex flex-col h-auto lg:w-64 lg:border-c-ghost lg:border-r-2 lg:h-full lg:shrink-0">
         <ContactInfos />
         <FindMeAlso />
       </div>
@@ -72,7 +72,7 @@ export default function ContactMe() {
           setIsDontCare={setIsDontCare}
         />
       ) : (
-        <div className="flex flex-col w-full h-full">
+        <div className="flex flex-col w-auto h-full lg:w-full mx-2 lg:mx-0">
           <div className="hidden lg:flex flex-col w-full border-b-2 border-c-border">
             <span className="flex items-center justify-between p-2 w-48 border-r-2 border-c-border text-cl-muted">
               contacts
@@ -83,7 +83,7 @@ export default function ContactMe() {
               />
             </span>
           </div>
-          <div className="flex w-full h-full">
+          <div className="flex w-full h-full lg:overflow-y-auto">
             {formSubmitted ? (
               <FormSubmit {...props} />
             ) : (
