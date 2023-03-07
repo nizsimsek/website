@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { useSelectedLayoutSegment } from "next/navigation";
 
-export default function Footer({ menuIsOpen }) {
+export default function Footer({ menuIsOpen }: { menuIsOpen: boolean }) {
   const activeSegment = useSelectedLayoutSegment();
   return (
     <>
