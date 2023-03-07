@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import './globals.css';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import MobileMenu from '../components/MobileMenu';
-import { useEffect, useState } from 'react';
-import { ImSpinner } from 'react-icons/im';
+import "./globals.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import MobileMenu from "../components/MobileMenu";
+import { useEffect, useState } from "react";
+import { ImSpinner } from "react-icons/im";
 
 export default function RootLayout({
   children,
@@ -14,6 +14,17 @@ export default function RootLayout({
 }) {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [isDevelopmentMode, setIsDevelopmentMode] = useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth > 1023) {
+      setMenuIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   let props = {
     menuIsOpen,
@@ -37,10 +48,15 @@ export default function RootLayout({
         {!isDevelopmentMode && (
           <div className="flex flex-col flex-nowrap h-full">
             <Header {...props} />
-            <div className="overflow-y-auto lg:overflow-hidden scroll-smooth flex-auto mx-1 lg:mx-0">
+            <div
+              className={
+                "overflow-y-auto lg:overflow-hidden scroll-smooth flex-auto mx-1 lg:mx-0" +
+                (menuIsOpen ? " mx-0" : "")
+              }
+            >
               {menuIsOpen ? <MobileMenu {...props} /> : children}
             </div>
-            <Footer />
+            <Footer menuIsOpen={menuIsOpen} />
           </div>
         )}
       </body>

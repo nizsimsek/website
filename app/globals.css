@@ -25,10 +25,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
 :root {
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   background-color: #010c15;
   padding: 30px;
   color: #ffffff;
@@ -45,4 +45,10 @@ body {
   height: -webkit-fill-available;
   height: 100%;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  :root {
+    padding: 15px;
+  }
 }
