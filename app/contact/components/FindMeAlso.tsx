@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useState } from 'react';
+import Link from "next/link";
+import { useState } from "react";
 import {
   RiArrowDownSFill,
   RiArrowRightSFill,
   RiInstagramFill,
   RiDiscordFill,
-} from 'react-icons/ri';
-import { ImTwitter } from 'react-icons/im';
+} from "react-icons/ri";
+import { ImTwitter } from "react-icons/im";
 
 export const FindMeAlso = () => {
   const [show, setShow] = useState(false);
@@ -17,10 +17,7 @@ export const FindMeAlso = () => {
     <div className="flex flex-col h-auto mt-1 lg:mt-0 lg:h-full">
       <div className="flex items-center bg-c-ghost lg:bg-transparent h-auto py-1 px-4 mx-1 lg:m-0 lg:border-c-border lg:border-b-2 lg:py-2 lg:w-64">
         <span
-          className={
-            'flex items-center gap-2 cursor-pointer text-cl-muted hover:text-white' +
-            (show ? ' text-white' : '')
-          }
+          className="flex items-center gap-2 cursor-pointer text-cl-muted hover:text-white"
           onClick={() => {
             setShow(() => {
               return !show;
