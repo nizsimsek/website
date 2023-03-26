@@ -23,12 +23,12 @@ export default function Home() {
               &#47;&#47; find my profile on Github:
             </span>
             <div className="max-w-xs md:max-w-none">
-              <span className="text-code-red">const </span>
-              <span className="text-c-turquoise">githubLink </span>
+              <span className="text-code-orange">const </span>
+              <span className="text-code-pink">githubLink </span>
               <span>= </span>
               <Link
                 href="https://github.com/nizsimsek"
-                className="text-c-pink hover:text-white"
+                className="text-code-yellow hover:text-white"
               >
                 <span style={{ overflowWrap: "anywhere" }}>
                   “https://github.com/nizsimsek”
