@@ -5,7 +5,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['www.reactiongifs.us'],
+    domains: ['www.reactiongifs.us', 'picsum.photos'],
   },
 };
 
