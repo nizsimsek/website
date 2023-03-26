@@ -22,33 +22,18 @@ export default function Footer({ menuIsOpen }: { menuIsOpen: boolean }) {
                     </span>
                     <div className="flex h-full">
                         <span className="flex items-center h-full px-4 hover:text-white border-l-2 border-c-border lg:border-l-0">
-                            <Link
-                                href="https://twitter.com/ilahinizo"
-                                legacyBehavior
-                            >
-                                <a className="flex items-center" alt="Twitter">
-                                    <ImTwitter />
-                                </a>
+                            <Link href="https://twitter.com/ilahinizo">
+                                <ImTwitter />
                             </Link>
                         </span>
                         <span className="flex items-center h-full border-l-2 lg:border-r-2 border-c-border px-4 hover:text-white">
-                            <Link
-                                href="https://linkedin.com/in/nizsimsek"
-                                legacyBehavior
-                            >
-                                <a className="flex items-center" alt="LinkedIn">
-                                    <ImLinkedin2 />
-                                </a>
+                            <Link href="https://linkedin.com/in/nizsimsek">
+                                <ImLinkedin2 />
                             </Link>
                         </span>
                         <span className="flex items-center h-full border-l-2 border-c-border px-4 hover:text-white lg:hidden">
-                            <Link
-                                href="https://github.com/nizsimsek"
-                                legacyBehavior
-                            >
-                                <a className="flex items-center" alt="Github">
-                                    <ImGithub />
-                                </a>
+                            <Link href="https://github.com/nizsimsek">
+                                <ImGithub />
                             </Link>
                         </span>
                     </div>
@@ -58,11 +43,8 @@ export default function Footer({ menuIsOpen }: { menuIsOpen: boolean }) {
                         <Link
                             href="https://github.com/nizsimsek"
                             className="flex items-center"
-                            legacyBehavior
                         >
-                            <a className="flex items-center" alt="Github">
-                                @nizsimsek <ImGithub className="ml-2" />
-                            </a>
+                            @nizsimsek <ImGithub className="ml-2" />
                         </Link>
                     </span>
                 </div>
