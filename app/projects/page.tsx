@@ -4,44 +4,38 @@ import { useEffect, useState } from "react";
 import { Sidebar } from "./components/Sidebar";
 import { Card } from "./components/Card";
 import { RxCross2 } from "react-icons/rx";
-import {
-    SiHtml5,
-    SiCss3,
-    SiJavascript,
-    SiReact,
-    SiTypescript,
-    SiVuedotjs,
-    SiNodedotjs,
-    SiAngular,
-    SiTailwindcss,
-} from "react-icons/si";
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTypescript, SiNextdotjs, SiVuedotjs, SiNodedotjs, SiAngular, SiTailwindcss } from "react-icons/si";
+import NFTKing from "./../assets/NFTKing.png";
+import RiseFinance from "./../assets/RiseFinance.png";
 
 export default function Projects() {
     const [projects, setProjects] = useState([
         {
             id: 1,
-            name: "project-1",
+            name: "NFT King Landing Page",
+            description: "NFT King is a landing page for NFT Marketplace. It is built with NextJS, NextUI and TailwindCSS.",
+            technologies: ["NextJS", "NextUI", "TailwindCSS"],
+            siteUrl: "https://nft-hero.nizamettinsimsek.com/",
+            image: NFTKing,
+        },
+        {
+            id: 2,
+            name: "Rise Finance Landing Page",
+            description: "Rise Finance is a landing page for Rise Financial Technology Company. It is built with NextJS and TailwindCSS.",
+            technologies: ["NextJS", "TailwindCSS"],
+            siteUrl: "https://fintech.nizamettinsimsek.com/",
+            image: RiseFinance,
+        },
+        {
+            id: 3,
+            name: "Demo Project 1",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl.",
             technologies: ["HTML", "CSS", "JavaScript"],
         },
         {
-            id: 2,
-            name: "project-2",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl.",
-            technologies: ["React", "TypeScript", "TailwindCSS"],
-        },
-        {
-            id: 3,
-            name: "project-3",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl.",
-            technologies: ["Vue"],
-        },
-        {
             id: 4,
-            name: "project-4",
+            name: "Demo Project 2",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl.",
             technologies: ["NodeJS"],
@@ -81,32 +75,26 @@ export default function Projects() {
         },
         {
             id: 6,
-            name: "Vue",
-            checked: false,
-            icon: <SiVuedotjs />,
-        },
-        {
-            id: 7,
             name: "NodeJS",
             checked: false,
             icon: <SiNodedotjs />,
         },
         {
-            id: 8,
-            name: "Angular",
-            checked: false,
-            icon: <SiAngular />,
-        },
-        {
-            id: 9,
+            id: 7,
             name: "TailwindCSS",
             checked: false,
             icon: <SiTailwindcss />,
         },
+        {
+            id: 8,
+            name: "NextJS",
+            checked: false,
+            icon: <SiNextdotjs />,
+        },
     ]);
 
     useEffect(() => {
-        if(technologies.every((tech) => !tech.checked) || technologies.every((tech) => tech.checked)) {
+        if (technologies.every((tech) => !tech.checked) || technologies.every((tech) => tech.checked)) {
             setFilteredProjects(projects);
             return;
         } else {
@@ -117,7 +105,6 @@ export default function Projects() {
             });
 
             setFilteredProjects(filteredProjects);
-
         }
     }, [technologies, projects]);
 
@@ -127,17 +114,13 @@ export default function Projects() {
                 <span className="text-sm">_projects</span>
             </div>
             <div className="flex flex-col h-auto lg:w-64 lg:border-c-ghost lg:border-r-2 lg:h-full lg:shrink-0">
-                <Sidebar
-                    technologies={technologies}
-                    setTechnologies={setTechnologies}
-                />
+                <Sidebar technologies={technologies} setTechnologies={setTechnologies} />
             </div>
             <div className="flex flex-col w-full h-full">
                 <div className="hidden lg:flex flex-col w-full border-b-2 border-c-border">
                     <span className="flex items-center justify-between p-2 w-fit border-r-2 border-c-border text-cl-muted">
                         <span className="line-clamp-1">
-                            {technologies.every((tech) => tech.checked) ||
-                            technologies.every((tech) => !tech.checked)
+                            {technologies.every((tech) => tech.checked) || technologies.every((tech) => !tech.checked)
                                 ? "all-technologies"
                                 : technologies.reduce((acc: string[], curr) => {
                                       if (curr.checked) {
