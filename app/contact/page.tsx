@@ -9,6 +9,7 @@ import { ContactForm } from "./components/ContactForm";
 import { FormSubmit } from "./components/FormSubmit";
 import { ContactFormPreview } from "./components/ContactFormPreview";
 import { RxCross2 } from "react-icons/rx";
+import Sidebar from "@components/Sidebar";
 
 export default function ContactMe() {
     const [fullName, setFullName] = useState("");
@@ -51,16 +52,14 @@ export default function ContactMe() {
         setFormSubmitted,
     };
 
+    const page = {
+        name: "_contact-me",
+        components: [<ContactInfos key="_contact-infos" />, <FindMeAlso key="_find-me-also" />],
+    };
+
     return (
         <div className="flex flex-col lg:flex-row h-full">
-            <div className="flex lg:hidden px-5 py-4 lg:h-full">
-                <span className="text-sm">_contact-me</span>
-            </div>
-            <div className="flex flex-col h-auto lg:w-64 lg:border-c-ghost lg:border-r-2 lg:h-full lg:shrink-0">
-                <ContactInfos />
-                <FindMeAlso />
-            </div>
-
+            <Sidebar page={page} />
             <div className="flex flex-col w-auto h-full lg:w-full mx-2 lg:mx-0">
                 <div className="hidden lg:flex flex-col w-full border-b-2 border-c-border">
                     <span className="flex items-center justify-between p-2 w-48 border-r-2 border-c-border text-cl-muted">
@@ -69,11 +68,7 @@ export default function ContactMe() {
                     </span>
                 </div>
                 <div className="flex w-full h-full lg:overflow-y-auto">
-                    {formSubmitted ? (
-                        <FormSubmit {...props} />
-                    ) : (
-                        <ContactForm {...props} />
-                    )}
+                    {formSubmitted ? <FormSubmit {...props} /> : <ContactForm {...props} />}
                     <ContactFormPreview {...props} />
                 </div>
             </div>

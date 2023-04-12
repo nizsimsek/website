@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "../../../components/Button";
+import { Button } from "@components/Button";
 
 interface Props {
     setFullName: (fullName: string) => void;

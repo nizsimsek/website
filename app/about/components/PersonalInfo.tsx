@@ -9,7 +9,7 @@ import {
 } from "react-icons/ri";
 import { ImGithub, ImLinkedin2, ImTwitter } from "react-icons/im";
 
-export const ContactInfos = () => {
+export const PersonalInfo = () => {
   const [show, setShow] = useState(false);
 
   return (
@@ -28,32 +28,12 @@ export const ContactInfos = () => {
             });
           }}
         >
-          {show ? <RiArrowDownSFill /> : <RiArrowRightSFill />} contacts
+          {show ? <RiArrowDownSFill /> : <RiArrowRightSFill />} personal-info
         </span>
       </div>
       {show && (
         <div className="flex flex-col px-4 py-1 lg:pb-4">
-          <Link
-            href="mailto:nizsimsek@gmail.com"
-            className="flex items-center h-8 text-cl-muted hover:text-white"
-          >
-            <RiMailFill />
-            <span className="ml-1">nizsimsek@gmail.com</span>
-          </Link>
-          <Link
-            href="https://github.com/nizsimsek"
-            className="flex items-center h-8 text-cl-muted hover:text-white"
-          >
-            <ImGithub />
-            <span className="ml-1">@nizsimsek</span>
-          </Link>
-          <Link
-            href="https://linkedin.com/in/nizsimsek"
-            className="flex items-center h-8 text-cl-muted hover:text-white"
-          >
-            <ImLinkedin2 />
-            <span className="ml-1 h-5">Nizamettin Şimşek</span>
-          </Link>
+            aaaa
         </div>
       )}
     </div>

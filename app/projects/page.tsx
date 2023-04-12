@@ -1,18 +1,20 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Sidebar } from "./components/Sidebar";
 import { Card } from "./components/Card";
 import { RxCross2 } from "react-icons/rx";
 import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTypescript, SiNextdotjs, SiVuedotjs, SiNodedotjs, SiAngular, SiTailwindcss } from "react-icons/si";
 import NFTKing from "./../assets/NFTKing.png";
 import RiseFinance from "./../assets/RiseFinance.png";
+import { Technologies } from "./components/Technologies";
+import Sidebar from "@components/Sidebar";
 
 export default function Projects() {
     const [projects, setProjects] = useState([
         {
             id: 1,
             name: "NFT King Landing Page",
+            cardText: "_nft-king",
             description: "NFT King is a landing page for NFT Marketplace. It is built with NextJS, NextUI and TailwindCSS.",
             technologies: ["NextJS", "NextUI", "TailwindCSS"],
             siteUrl: "https://nft-hero.nizamettinsimsek.com/",
@@ -21,6 +23,7 @@ export default function Projects() {
         {
             id: 2,
             name: "Rise Finance Landing Page",
+            cardText: "_rise-finance",
             description: "Rise Finance is a landing page for Rise Financial Technology Company. It is built with NextJS and TailwindCSS.",
             technologies: ["NextJS", "TailwindCSS"],
             siteUrl: "https://fintech.nizamettinsimsek.com/",
@@ -29,6 +32,7 @@ export default function Projects() {
         {
             id: 3,
             name: "Demo Project 1",
+            cardText: "_demo-project-1",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl.",
             technologies: ["HTML", "CSS", "JavaScript"],
@@ -36,6 +40,7 @@ export default function Projects() {
         {
             id: 4,
             name: "Demo Project 2",
+            cardText: "_demo-project-2",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl.",
             technologies: ["NodeJS"],
@@ -108,14 +113,14 @@ export default function Projects() {
         }
     }, [technologies, projects]);
 
+    const page = {
+        name: "_projects",
+        components: [<Technologies technologies={technologies} setTechnologies={setTechnologies} key="_technologies" />],
+    };
+
     return (
         <div className="flex flex-col lg:flex-row h-full">
-            <div className="flex lg:hidden px-5 py-4 lg:h-full">
-                <span className="text-sm">_projects</span>
-            </div>
-            <div className="flex flex-col h-auto lg:w-64 lg:border-c-ghost lg:border-r-2 lg:h-full lg:shrink-0">
-                <Sidebar technologies={technologies} setTechnologies={setTechnologies} />
-            </div>
+            <Sidebar page={page} />
             <div className="flex flex-col w-full h-full">
                 <div className="hidden lg:flex flex-col w-full border-b-2 border-c-border">
                     <span className="flex items-center justify-between p-2 w-fit border-r-2 border-c-border text-cl-muted">
@@ -133,7 +138,7 @@ export default function Projects() {
                     </span>
                 </div>
                 <div className="flex w-full h-auto lg:overflow-y-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 sm:gap-4 p-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 sm:gap-4 p-4">
                         {filteredProjects.map((project) => {
                             return <Card project={project} key={project.id} />;
                         })}

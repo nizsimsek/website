@@ -1,9 +1,9 @@
 "use client";
 
 import "./globals.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import MobileMenu from "../components/MobileMenu";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
+import MobileMenu from "@components/MobileMenu";
 import { useEffect, useState } from "react";
 import { ImSpinner } from "react-icons/im";
 

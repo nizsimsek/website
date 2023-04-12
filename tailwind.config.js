@@ -31,6 +31,7 @@ module.exports = {
         'code-green': '#5DE8A1',
         'code-soft-green': '#C3E88D',
         'code-neon-green': '#67EC6C',
+        'card-project': '#33D9AD',
       },
     },
   },

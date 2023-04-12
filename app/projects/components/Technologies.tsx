@@ -34,7 +34,7 @@ interface Props {
     >;
 }
 
-export const Sidebar = ({ technologies, setTechnologies }: Props) => {
+export const Technologies = ({ technologies, setTechnologies }: Props) => {
     const [show, setShow] = useState(true);
 
     return (
