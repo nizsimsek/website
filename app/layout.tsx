@@ -6,6 +6,7 @@ import Footer from "@components/Footer";
 import MobileMenu from "@components/MobileMenu";
 import { useEffect, useState } from "react";
 import { ImSpinner } from "react-icons/im";
+import GoogleAnalytics from "@components/GoogleAnalytics";
 
 export default function RootLayout({
   children,
@@ -39,6 +40,7 @@ export default function RootLayout({
       */}
       <head />
       <body>
+        <GoogleAnalytics ga_id="G-4P9438S1D5" />
         {isDevelopmentMode && (
           <iframe
             src="https://fakeupdate.net/win10ue/"
