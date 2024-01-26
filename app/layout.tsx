@@ -40,7 +40,7 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <GoogleAnalytics ga_id="G-4P9438S1D5" />
+        <GoogleAnalytics ga_id="G-4P9438S1D5" gtm_id="GTM-MN29M9X5" />
         {isDevelopmentMode && (
           <iframe
             src="https://fakeupdate.net/win10ue/"
