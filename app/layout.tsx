@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const [isDevelopmentMode, setIsDevelopmentMode] = useState(true);
+  const [isDevelopmentMode, setIsDevelopmentMode] = useState(false);
 
   const handleResize = () => {
     if (window.innerWidth > 1023) {
