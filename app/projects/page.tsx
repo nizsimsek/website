@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 import { Card } from "./components/Card";
 import { RxCross2 } from "react-icons/rx";
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTypescript, SiNextdotjs, SiVuedotjs, SiNodedotjs, SiAngular, SiTailwindcss } from "react-icons/si";
+import { SiJavascript, SiReact, SiTypescript, SiNextdotjs, SiNodedotjs, SiTailwindcss, SiSocketdotio, SiWebrtc } from "react-icons/si";
 import NFTKing from "./../assets/NFTKing.png";
 import RiseFinance from "./../assets/RiseFinance.png";
+import Live from "./../assets/Live.jpeg";
+import Efor from "./../assets/Efor.svg";
 import { Technologies } from "./components/Technologies";
 import Sidebar from "@components/Sidebar";
 
@@ -13,88 +15,90 @@ export default function Projects() {
     const [projects, setProjects] = useState([
         {
             id: 1,
+            name: "Live 2P2 Private Video Call Application",
+            cardText: "_live-2p2",
+            description: "Live is P2P Private Video Call Application. You are create a room and share room link your friend. You can make a private video call with your friend. It is built with ReactJS, SocketIO, WebRTC and TailwindCSS",
+            technologies: ["React", "SocketIO", "WebRTC", "TailwindCSS"],
+            siteUrl: "https://livep2p.nizamettinsimsek.com.tr/",
+            image: Live,
+        },
+        {
+            id: 2,
             name: "NFT King Landing Page",
             cardText: "_nft-king",
             description: "NFT King is a landing page for NFT Marketplace. It is built with NextJS, NextUI and TailwindCSS.",
             technologies: ["NextJS", "NextUI", "TailwindCSS"],
-            siteUrl: "https://nft-hero.nizamettinsimsek.com/",
+            siteUrl: "https://nft-hero.nizamettinsimsek.com.tr/",
             image: NFTKing,
         },
         {
-            id: 2,
+            id: 3,
             name: "Rise Finance Landing Page",
             cardText: "_rise-finance",
             description: "Rise Finance is a landing page for Rise Financial Technology Company. It is built with NextJS and TailwindCSS.",
             technologies: ["NextJS", "TailwindCSS"],
-            siteUrl: "https://fintech.nizamettinsimsek.com/",
+            siteUrl: "https://fintech.nizamettinsimsek.com.tr/",
             image: RiseFinance,
         },
         {
-            id: 3,
-            name: "Demo Project 1",
-            cardText: "_demo-project-1",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl.",
-            technologies: ["HTML", "CSS", "JavaScript"],
-        },
-        {
             id: 4,
-            name: "Demo Project 2",
-            cardText: "_demo-project-2",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl sit amet nisl.",
-            technologies: ["NodeJS"],
+            name: "Efor Landing Page",
+            cardText: "_efor",
+            description: "Efor gives you everything you need to create your website in minutes. It is built with NextJS and TailwindCSS.",
+            technologies: ["NextJS", "TailwindCSS"],
+            siteUrl: "https://efor.nizamettinsimsek.com.tr/",
+            image: Efor,
         },
     ]);
     const [filteredProjects, setFilteredProjects] = useState(projects);
     const [technologies, setTechnologies] = useState([
         {
             id: 1,
-            name: "HTML",
-            checked: false,
-            icon: <SiHtml5 />,
-        },
-        {
-            id: 2,
-            name: "CSS",
-            checked: false,
-            icon: <SiCss3 />,
-        },
-        {
-            id: 3,
             name: "JavaScript",
             checked: false,
             icon: <SiJavascript />,
         },
         {
-            id: 4,
+            id: 2,
             name: "React",
             checked: false,
             icon: <SiReact />,
         },
         {
-            id: 5,
+            id: 3,
             name: "TypeScript",
             checked: false,
             icon: <SiTypescript />,
         },
         {
-            id: 6,
+            id: 4,
             name: "NodeJS",
             checked: false,
             icon: <SiNodedotjs />,
         },
         {
-            id: 7,
+            id: 5,
             name: "TailwindCSS",
             checked: false,
             icon: <SiTailwindcss />,
         },
         {
-            id: 8,
+            id: 6,
             name: "NextJS",
             checked: false,
             icon: <SiNextdotjs />,
+        },
+        {
+            id: 7,
+            name: "SocketIO",
+            checked: false,
+            icon: <SiSocketdotio />,
+        },
+        {
+            id: 8,
+            name: "WebRTC",
+            checked: false,
+            icon: <SiWebrtc />,
         },
     ]);
 
